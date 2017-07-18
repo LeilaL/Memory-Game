@@ -14,3 +14,21 @@ function random(tab){
 	}
 }
 random(tab);
+
+function choisir(carte) {
+	if (clique == 2) {
+		return;
+	}
+	if (clique == 0) {
+		choixun = carte;
+		document.images[carte].src =  tab[carte];
+		document.images[choixun].style.pointerEvents = 'none';
+		clique = 1;
+	}
+	else {
+		clique = 2;
+		choixdeux = carte;
+		document.images[carte].src =  tab[carte];
+		timer = setTimeout("verif()", 500);
+	}
+}
