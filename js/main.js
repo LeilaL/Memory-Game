@@ -32,3 +32,19 @@ function choisir(carte) {
 		timer = setTimeout("verif()", 500);
 	}
 }
+
+function verif() {
+	clique = 0;
+	if (tab[choixdeux] ==  tab[choixun]) {
+		document.images[choixun].style.pointerEvents = 'none';
+		document.images[choixun].style.opacity = '0.3';
+		document.images[choixun].style.pointerEvents = 'none';
+		document.images[choixdeux].style.opacity = '0.3';
+	} else {
+		document.images[choixun].style.pointerEvents = 'auto';
+		return;
+	}
+	if (paires==7) {
+   document.getElementsById.innerHTML ="Tu as gagné !"
+	}
+}
