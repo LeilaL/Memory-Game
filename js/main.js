@@ -3,8 +3,8 @@ var tab = ["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg","img/5.jpg","img/6.jp
 var click=0;
 var choix1;
 var choix2;
-var recto = "img/index.png";
 var images = document.getElementsByTagName("img");
+var recto = images[0].src;
 var i1;
 var i2;
 var paires = 0;
@@ -30,21 +30,28 @@ function choose(carte) {
 // 		// return;
 //   console.log('test');
 // }
+
+if (images[carte].src == recto) {
+
 	if (click == 0) {
 		choix1 = tab[carte];
 		images[carte].src =  tab[carte];
-		click = 1;
     i1 = carte;
+    //images[i1].style.pointerEvents = "none";
+    click = 1;
     // console.log("premier");
 	}
+
 	else {
 		click = 2;
 		choix2 = tab[carte];
     images[carte].src =  tab[carte];
     i2 = carte;
+    // images[i2].style.pointerEvents = "none";
     // console.log('second');
     compare(choix1,choix2);
 	}
+}
 }
 
 function compare(a,b) {
@@ -52,17 +59,23 @@ function compare(a,b) {
 	if (a ==  b) {
     images[i1].style.opacity = "0.5";
 		images[i2].style.opacity = "0.5";
+    // images[a].style.pointerEvents = "none";
     paires++
+    console.log(paires);
     // alert('gagné');
 	}
-  if (paires ==7) {
-    document.getElementsById.src = 
-}
+//   if (paires ==7) {
+//     document.getElementsById("corps").src = "img/giphy.gif";
+// }
     else {
-    // setTimeout(retourne, 1000);
-    images[i1].src = recto;
-    images[i2].src = recto;
-		// images[choix1].style.pointerEvents = "none";
+    setTimeout(function(){
+      images[i1].src= recto;
+      images[i2].src= recto;
+    }, 500);
+    // images[a].style.pointerEvents = "none";
+    // images[i1].src = recto;
+    // images[i2].src = recto;
+		// images[i1].style.pointerEvents = "none";
 // alert('perdu');
 	}
 }
