@@ -7,6 +7,7 @@ var recto = "img/index.png";
 var images = document.getElementsByTagName("img");
 var i1;
 var i2;
+var paires = 0;
 
 function random(tab){
 	var j, x, i;
@@ -49,19 +50,24 @@ function choose(carte) {
 function compare(a,b) {
 	click = 0;
 	if (a ==  b) {
-    images[a].style.opacity = "0.5";
-		images[b].style.opacity = "0.5";
+    images[i1].style.opacity = "0.5";
+		images[i2].style.opacity = "0.5";
+    paires++
     // alert('gagné');
-	} else {
-    setTimeout(retourne, 1000);
-    // images[a].src = recto;
-    // images[b].src = recto;
+	}
+  if (paires ==7) {
+    document.getElementsById.src = 
+}
+    else {
+    // setTimeout(retourne, 1000);
+    images[i1].src = recto;
+    images[i2].src = recto;
 		// images[choix1].style.pointerEvents = "none";
 // alert('perdu');
 	}
 }
 
-function retourne () {
-  images[i1].src= recto;
-  images[i2].src= recto;
-}
+// function retourne () {
+//   images[i1].src= recto;
+//   images[i2].src= recto;
+// }
