@@ -64,8 +64,8 @@ function compare(a,b) {
     console.log(paires);
     // alert('gagné');
 	}
-//   if (paires ==7) {
-//     document.getElementsById("corps").src = "img/giphy.gif";
+//   else if (paires ==7) {
+//     document.getElementsByTagName('body').style.backgroundImage = "img/giphy.gif";
 // }
     else {
     setTimeout(function(){

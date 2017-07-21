@@ -1,6 +1,16 @@
+@font-face {
+  font-family: "mario";
+  src: url(../font/mario.ttf);
+}
+
 #corps {
   display: flex;
   flex-wrap: wrap;
+}
+
+.titre {
+  font-family: "mario";
+  font-size: 50px;
 }
 
 div img {
@@ -12,4 +22,14 @@ div img:hover {
 
 div {
   width: 14%;
+}
+
+.replay {
+  border-radius: 10px;
+background-color: #FFCC01;
+color: white;
+border-color: #FFF002;
+font-weight: bold;
+height: 50px;
+font-family: "mario";
 }
