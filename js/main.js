@@ -63,10 +63,14 @@ function compare(a,b) {
     paires++
     console.log(paires);
     // alert('gagné');
+    if (paires ==7) {
+      // alert("Gagné !");
+      document.body.style.background = "url('img/giphy.gif') center no-repeat";
+      document.body.style.backgroundSize = "cover";
+  }
+
 	}
-//   else if (paires ==7) {
-//     document.getElementsByTagName('body').style.backgroundImage = "img/giphy.gif";
-// }
+
     else {
     setTimeout(function(){
       images[i1].src= recto;
